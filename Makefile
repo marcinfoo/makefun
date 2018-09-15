@@ -28,3 +28,8 @@ go:
 print:
 	@echo "Calling function..."
 	$(call print_nicely,$(GO))
+
+special-chars: clean go
+	@echo "Called target $@"
+	@echo "First prerequisite: $<"
+	@echo "All prerequisites: $^"
