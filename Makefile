@@ -1,5 +1,11 @@
-
+# evaluate call into variable
 GO=$(shell which go)
+
+# sample function
+define print_nicely
+	@echo "-------->$(1)<-----------"
+endef
+
 
 # silent commands with @
 create1: clean
@@ -17,3 +23,8 @@ clean:
 go:
 	@echo "The path to go is:" 
 	@echo $(GO)
+
+# call predefined function - arguments passed as $1, $2, etc.
+print:
+	@echo "Calling function..."
+	$(call print_nicely,$(GO))

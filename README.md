@@ -1,5 +1,6 @@
 Sample Makefile.
 
-Includes conditional actions.
-
-Note - @ silences printout of the command
+Includes:
+1. capturing evaluation of function to variable
+2. calling predefined function 
+3. silencing of echoing of commdands by using @
